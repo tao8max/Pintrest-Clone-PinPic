@@ -8,11 +8,11 @@ class PinsController < ApplicationController
 	end
 
 	def new
-		@pin=Pin.new
+		@pin=current_user.pins.build
 	end
 
 	def create
-		@Pin.new(pin_params)
+		@pin=current_user.pins.build(pin_params)
 		if @pin.save
 			redirect_to @pin, notice: "Your new pin was successfully created."
 		else
