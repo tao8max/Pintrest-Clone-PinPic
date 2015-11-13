@@ -18,10 +18,11 @@ gem 'paperclip', '~> 4.3', '>= 4.3.1'
 gem 'masonry-rails', '~> 0.2.4'
 
 group :development, :test do
+  gem 'rspec-rails', '~> 3.3', '>= 3.3.3'
   gem 'byebug'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
-gem 'spring'
+  gem 'spring'
 end
